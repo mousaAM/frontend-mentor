@@ -2,6 +2,8 @@ import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import { links } from "./data";
 
+import type { DocumentHead } from "@builder.io/qwik-city";
+
 export default component$(() => {
   return (
     <>
@@ -15,7 +17,7 @@ export default component$(() => {
         class="w-full py-8 text-center font-bold"
       >
         <h1 class="sm:text-3xl text-xl font-poppins">
-          Frontend-mentor projects
+          Frontend mentor challenges
         </h1>
       </div>
       <div class="flex flex-row flex-wrap justify-center p-4">
@@ -33,3 +35,14 @@ export default component$(() => {
     </>
   );
 });
+
+export const head: DocumentHead = {
+  title: "Frontend mentor challenges - Mousa Aboubaker",
+  meta: [
+    {
+      name: "description",
+      content:
+        "This website contains my solutions for frontend mentor challenges",
+    },
+  ],
+};
