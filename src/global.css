@@ -1,4 +1,12 @@
 /**
+ * Tailwind CSS imports
+ * View the full documentation at https://tailwindcss.com
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
  * WHAT IS THIS FILE?
  *
  * Globally applied styles. No matter which components are in the page or matching route,
@@ -6,31 +14,39 @@
  *
  */
 
-:root {
-  --qwik-dark-blue: #006ce9;
-  --qwik-light-blue: #18b6f6;
-  --qwik-light-purple: #ac7ff4;
-  --qwik-dark-purple: #713fc2;
-  --qwik-dirty-black: #1d2033;
-  --qwik-dark-background: #151934;
-  --qwik-dark-text: #ffffff;
+@font-face {
+  font-family: "Poppins";
+  src: url("components/age-calculator-app-main/assets/fonts/Poppins-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
-html {
-  line-height: 1;
-  -webkit-text-size-adjust: 100%;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
+@font-face {
+  font-family: "Poppins";
+  src: url("components/age-calculator-app-main/assets/fonts/Poppins-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  line-height: inherit;
+@font-face {
+  font-family: "Poppins";
+  src: url("components/age-calculator-app-main/assets/fonts/Poppins-ExtraBold.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("components/age-calculator-app-main/assets/fonts/Poppins-ExtraBoldItalic.ttf");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("components/age-calculator-app-main/assets/fonts/Poppins-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
 }
 
 /**
@@ -40,17 +56,24 @@ body {
  * the styles in here will be applied to the Document, without any sort of CSS scoping.
  *
  */
+
 html {
+  line-height: 1;
   -webkit-text-size-adjust: 100%;
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   padding: 0;
+  margin: 0;
   line-height: inherit;
+}
+* {
+  transition: all 150ms;
 }
