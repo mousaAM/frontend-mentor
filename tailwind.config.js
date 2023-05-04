@@ -5,6 +5,10 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: '"Poppins", sans-serif',
+        outfit: '"Outfit", sans-serif',
+      },
+      screens: {
+        xs: "375px",
       },
     },
   },

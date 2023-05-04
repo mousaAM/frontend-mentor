@@ -76,14 +76,14 @@ export const CalculateAge = (
   }
 
   if (ageDays < 0) {
-      const prevMonthLastDay = new Date(
-        birthDate.getFullYear(),
-        birthDate.getMonth() + 1,
-        0
-      ).getDate();
-      ageDays += prevMonthLastDay;
-      ageMonths--;
-    }
+    const prevMonthLastDay = new Date(
+      birthDate.getFullYear(),
+      birthDate.getMonth() + 1,
+      0
+    ).getDate();
+    ageDays += prevMonthLastDay;
+    ageMonths--;
+  }
 
   return { years: ageYears, months: ageMonths, days: ageDays };
 };

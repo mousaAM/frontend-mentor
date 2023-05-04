@@ -16,19 +16,21 @@ export default component$(() => {
         "
         class="w-full py-8 text-center font-bold"
       >
-        <h1 class="text-3xl font-poppins">
-          Frontend mentor challenges
-        </h1>
+        <h1 class="text-3xl font-poppins">Frontend mentor challenges</h1>
       </div>
-      <div class="flex flex-row flex-wrap justify-center p-4">
+      <div class="flex flex-row flex-wrap justify-evenly p-4">
         {links.map((link, index) => (
           <Link
             key={index}
             href={link.url}
-            class="sm:basis-[calc(100%/4-1rem)] basis-full  flex flex-col items-center border-2 border-gray-900 hover:border-gray-500 hover:bg-gray-50 mt-2 hover:mt-0 rounded-3xl"
+            class="sm:basis-[calc(100%/4-1rem)] basis-full h-fit flex flex-col items-center border-2 border-gray-900 hover:border-gray-500 hover:bg-gray-50 mt-2 hover:mt-0 rounded-3xl"
           >
             <p class="my-4 font-poppins">{link.title}</p>
-            <img src={link.image} alt={link.url} class="rounded-b-3xl" />
+            <img
+              src={link.image}
+              alt={link.url}
+              class="rounded-b-3xl aspect-video object-cover"
+            />
           </Link>
         ))}
       </div>
