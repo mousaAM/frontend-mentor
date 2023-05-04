@@ -73,24 +73,17 @@ export const CalculateAge = (
   if (ageMonths < 0 || (ageMonths === 0 && ageDays < 0)) {
     ageYears--;
     ageMonths += 12;
-    if (ageDays < 0) {
+  }
+
+  if (ageDays < 0) {
       const prevMonthLastDay = new Date(
-        today.getFullYear(),
-        today.getMonth(),
+        birthDate.getFullYear(),
+        birthDate.getMonth() + 1,
         0
       ).getDate();
       ageDays += prevMonthLastDay;
       ageMonths--;
     }
-  } else if (ageDays < 0) {
-    const prevMonthLastDay = new Date(
-      birthDate.getFullYear(),
-      birthDate.getMonth(),
-      0
-    ).getDate();
-    ageDays += prevMonthLastDay;
-    ageMonths--;
-  }
 
   return { years: ageYears, months: ageMonths, days: ageDays };
 };

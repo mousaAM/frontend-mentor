@@ -1,5 +1,10 @@
 lockfileVersion: '6.0'
 
+dependencies:
+  dayjs:
+    specifier: ^1.11.7
+    version: 1.11.7
+
 devDependencies:
   '@builder.io/qwik':
     specifier: 0.107.0
@@ -3148,6 +3153,10 @@ packages:
     dependencies:
       time-zone: 1.0.0
     dev: true
+
+  /dayjs@1.11.7:
+    resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
+    dev: false
 
   /debug@2.6.9(supports-color@9.3.1):
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
