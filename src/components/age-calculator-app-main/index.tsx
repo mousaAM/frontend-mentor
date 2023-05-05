@@ -60,7 +60,7 @@ export default component$(() => {
 
   return (
     <>
-      <main class="w-screen h-screen flex justify-center items-center bg-stone-100">
+      <main class="w-screen min-h-[100vh] flex justify-center items-center bg-stone-100">
         <section class="bg-white sm:w-auto w-[90%] shadow py-8 sm:px-12 px-4 rounded-[24px] rounded-br-[100px]">
           <div
             role="group"
