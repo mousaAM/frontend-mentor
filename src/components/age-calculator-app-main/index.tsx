@@ -65,14 +65,14 @@ export default component$(() => {
           <div class="w-full flex flex-row sm:justify-start justify-center items-center">
             <div class={styles.inputDiv}>
               <label
-                class={`${styles.label} ${errors.days ? "text-red-400" : ""}`}
+                class={`${styles.label} ${errors.days ? "text-[hsl(0,100%,67%)]" : ""}`}
               >
                 DAY
               </label>
               <input
                 type="text"
                 placeholder="DD"
-                class={`${styles.input} ${errors.days ? "border-red-400" : ""}`}
+                class={`${styles.input} ${errors.days ? "border-[hsl(0,100%,67%)]" : ""}`}
                 onKeyUp$={(event) => {
                   date.dd = parseInt((event.target as HTMLInputElement).value);
                 }}
@@ -83,7 +83,7 @@ export default component$(() => {
             </div>
             <div class={styles.inputDiv}>
               <label
-                class={`${styles.label} ${errors.month ? "text-red-400" : ""}`}
+                class={`${styles.label} ${errors.month ? "text-[hsl(0,100%,67%)]" : ""}`}
               >
                 MONTH
               </label>
@@ -91,7 +91,7 @@ export default component$(() => {
                 type="text"
                 placeholder="MM"
                 class={`${styles.input} ${
-                  errors.month ? "border-red-400" : ""
+                  errors.month ? "border-[hsl(0,100%,67%)]" : ""
                 }`}
                 onKeyUp$={(event) => {
                   date.mm = parseInt((event.target as HTMLInputElement).value);
@@ -103,14 +103,14 @@ export default component$(() => {
             </div>
             <div class={styles.inputDiv}>
               <label
-                class={`${styles.label}  ${errors.year ? "text-red-400" : ""}`}
+                class={`${styles.label}  ${errors.year ? "text-[hsl(0,100%,67%)]" : ""}`}
               >
                 YEAR
               </label>
               <input
                 type="text"
                 placeholder="YYYY"
-                class={`${styles.input} ${errors.year ? "border-red-400" : ""}`}
+                class={`${styles.input} ${errors.year ? "border-[hsl(0,100%,67%)]" : ""}`}
                 onKeyUp$={(event) => {
                   date.yyyy = parseInt(
                     (event.target as HTMLInputElement).value
@@ -124,18 +124,18 @@ export default component$(() => {
           </div>
 
           <div class="sm:w-[500px] w-full sm:my-0 my-8 flex flex-row justify-center items-center">
-            <div class="border-b-2 grow"></div>
-            <div class="p-4 bg-violet-500 rounded-full">
+            <div class="border-b-2 grow border-[hsl(0,0%,86%)]"></div>
+            <div class="p-4 bg-[hsl(259,100%,65%)] rounded-full">
               <Arrow class="w-[36px] h-[34px]" />
             </div>
-            <div class="border-b-2 sm:hidden grow"></div>
+            <div class="border-b-2 sm:hidden grow border-[hsl(0,0%,86%)]"></div>
           </div>
 
           <div class="flex flex-col">
             <div>
               <p class={styles.resultParagraph}>
                 <span class={styles.resultSpan}>
-                  {date.result.years ? date.result.years : "--"}
+                  {date.result.years ? date.result.years : "- -"}
                 </span>{" "}
                 years
               </p>
@@ -143,7 +143,7 @@ export default component$(() => {
             <div>
               <p class={styles.resultParagraph}>
                 <span class={styles.resultSpan}>
-                  {date.result.months ? date.result.months : "--"}
+                  {date.result.months ? date.result.months : "- -"}
                 </span>{" "}
                 months
               </p>
@@ -151,7 +151,7 @@ export default component$(() => {
             <div>
               <p class={styles.resultParagraph}>
                 <span class={styles.resultSpan}>
-                  {date.result.days ? date.result.days : "--"}
+                  {date.result.days ? date.result.days : "- -"}
                 </span>{" "}
                 days
               </p>
