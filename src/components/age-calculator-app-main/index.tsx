@@ -60,19 +60,26 @@ export default component$(() => {
 
   return (
     <>
-      <div class="w-screen h-screen flex justify-center items-center bg-stone-100">
-        <div class="bg-white sm:w-auto w-[90%] shadow py-8 sm:px-12 px-4 rounded-[24px] rounded-br-[100px]">
-          <div class="w-full flex flex-row sm:justify-start justify-center items-center">
-            <div class={styles.inputDiv}>
+      <main class="w-screen h-screen flex justify-center items-center bg-stone-100">
+        <section class="bg-white sm:w-auto w-[90%] shadow py-8 sm:px-12 px-4 rounded-[24px] rounded-br-[100px]">
+          <div
+            role="group"
+            class="w-full flex flex-row sm:justify-start justify-center items-center"
+          >
+            <div role="form" class={styles.inputDiv}>
               <label
-                class={`${styles.label} ${errors.days ? "text-[hsl(0,100%,67%)]" : ""}`}
+                class={`${styles.label} ${
+                  errors.days ? "text-[hsl(0,100%,67%)]" : ""
+                }`}
               >
                 DAY
               </label>
               <input
                 type="text"
                 placeholder="DD"
-                class={`${styles.input} ${errors.days ? "border-[hsl(0,100%,67%)]" : ""}`}
+                class={`${styles.input} ${
+                  errors.days ? "border-[hsl(0,100%,67%)]" : ""
+                }`}
                 onKeyUp$={(event) => {
                   date.dd = parseInt((event.target as HTMLInputElement).value);
                 }}
@@ -81,9 +88,11 @@ export default component$(() => {
                 {errors.days}
               </span>
             </div>
-            <div class={styles.inputDiv}>
+            <div role="form" class={styles.inputDiv}>
               <label
-                class={`${styles.label} ${errors.month ? "text-[hsl(0,100%,67%)]" : ""}`}
+                class={`${styles.label} ${
+                  errors.month ? "text-[hsl(0,100%,67%)]" : ""
+                }`}
               >
                 MONTH
               </label>
@@ -101,16 +110,20 @@ export default component$(() => {
                 {errors.month}
               </span>
             </div>
-            <div class={styles.inputDiv}>
+            <div role="form" class={styles.inputDiv}>
               <label
-                class={`${styles.label}  ${errors.year ? "text-[hsl(0,100%,67%)]" : ""}`}
+                class={`${styles.label}  ${
+                  errors.year ? "text-[hsl(0,100%,67%)]" : ""
+                }`}
               >
                 YEAR
               </label>
               <input
                 type="text"
                 placeholder="YYYY"
-                class={`${styles.input} ${errors.year ? "border-[hsl(0,100%,67%)]" : ""}`}
+                class={`${styles.input} ${
+                  errors.year ? "border-[hsl(0,100%,67%)]" : ""
+                }`}
                 onKeyUp$={(event) => {
                   date.yyyy = parseInt(
                     (event.target as HTMLInputElement).value
@@ -123,42 +136,47 @@ export default component$(() => {
             </div>
           </div>
 
-          <div class="sm:w-[500px] w-full sm:my-0 my-8 flex flex-row justify-center items-center">
-            <div class="border-b-2 grow border-[hsl(0,0%,86%)]"></div>
-            <div class="p-4 bg-[hsl(259,100%,65%)] rounded-full">
+          <div
+            role="group"
+            class="sm:w-[500px] w-full sm:my-0 my-8 flex flex-row justify-center items-center"
+          >
+            <div
+              role="none"
+              class="border-b-2 grow border-[hsl(0,0%,86%)]"
+            ></div>
+            <div role="none" class="p-4 bg-[hsl(259,100%,65%)] rounded-full">
               <Arrow class="w-[36px] h-[34px]" />
             </div>
-            <div class="border-b-2 sm:hidden grow border-[hsl(0,0%,86%)]"></div>
+            <div
+              role="none"
+              class="border-b-2 sm:hidden grow border-[hsl(0,0%,86%)]"
+            ></div>
           </div>
 
-          <div class="flex flex-col">
-            <div>
-              <p class={styles.resultParagraph}>
-                <span class={styles.resultSpan}>
-                  {date.result.years ? date.result.years : "- -"}
-                </span>{" "}
-                years
-              </p>
-            </div>
-            <div>
-              <p class={styles.resultParagraph}>
-                <span class={styles.resultSpan}>
-                  {date.result.months ? date.result.months : "- -"}
-                </span>{" "}
-                months
-              </p>
-            </div>
-            <div>
-              <p class={styles.resultParagraph}>
-                <span class={styles.resultSpan}>
-                  {date.result.days ? date.result.days : "- -"}
-                </span>{" "}
-                days
-              </p>
-            </div>
+          <div role="group" class="flex flex-col">
+            <p class={styles.resultParagraph}>
+              <span class={styles.resultSpan}>
+                {date.result.years ? date.result.years : "- -"}
+              </span>{" "}
+              years
+            </p>
+
+            <p class={styles.resultParagraph}>
+              <span class={styles.resultSpan}>
+                {date.result.months ? date.result.months : "- -"}
+              </span>{" "}
+              months
+            </p>
+
+            <p class={styles.resultParagraph}>
+              <span class={styles.resultSpan}>
+                {date.result.days ? date.result.days : "- -"}
+              </span>{" "}
+              days
+            </p>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </>
   );
 });
