@@ -8,6 +8,7 @@ module.exports = {
         outfit: "'Outfit', sans-serif",
         montserrat: "'Montserrat', sans-serif",
         fraunces: "'Fraunces', serif",
+        "Hanken-Grotesk": "'Hanken Grotesk', sans-serif",
       },
       screens: {
         xs: "375px",

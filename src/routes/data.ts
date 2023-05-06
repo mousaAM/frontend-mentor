@@ -1,6 +1,7 @@
 import ageCalculatorDesign from "~/components/age-calculator-app-main/design/desktop-design.jpg";
 import qrCodeDesign from "~/components/qr-code-component-main/design/desktop-design.jpg";
 import productPreviewCardDesign from "~/components/product-preview-card-component-main/design/desktop-design.jpg";
+import resultsSummaryDesign from "~/components/results-summary-component-main/design/desktop-design.jpg";
 
 export const links = [
   {
@@ -17,5 +18,10 @@ export const links = [
     title: "Product Preview Card Component",
     url: "/product-preview-card-component",
     image: productPreviewCardDesign,
+  },
+  {
+    title: "Results Summary Component",
+    url: "/results-summary-component",
+    image: resultsSummaryDesign,
   },
 ];
