@@ -39,7 +39,7 @@ export default component$(() => {
               </li>
             ))}
           </ul>
-          <button class="w-full mt-4 py-4 rounded-full bg-[hsl(224,30%,27%)] text-white">
+          <button class="w-full mt-4 py-4 rounded-full bg-[hsl(224,30%,27%)] bg-gradient-to-b hover:from-[hsl(252,100%,67%)] hover:to-[hsl(241,81%,54%)] text-white">
             Continue
           </button>
         </div>
